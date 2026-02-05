@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;StudyMate&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="styles.css" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="appShell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header class="topbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="logo"&gt;SM&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="appName"&gt;StudyMate&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tagline"&gt;Study + breaks timer with analytics&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="topActions"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="ghost" id="homeBtnTop"&gt;Home&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- HOME --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="view" id="homeView"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;StudyMate&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="sub"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Plan sessions with breaks, track active study time, set targets, and analyze by topic + mode.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="homeActionsGrid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="goStudyBtn" class="homeTile primary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="tileTitle"&gt;Let’s Study!&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="tileSub"&gt;Start a session&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="goTargetBtn" class="homeTile secondary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="tileTitle"&gt;Set Target and Topics&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="tileSub"&gt;Targets + masters&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="goAnalyticsBtn" class="homeTile secondary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="tileTitle"&gt;Analysis&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="tileSub"&gt;Logs &amp; trends&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="homeStats"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Yesterday --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="statCard centerCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="statHead"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="statLabel"&gt;Yesterday&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pillSmall" id="yesterdayDatePill"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ydayRingWrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;svg class="ydayRing" viewBox="0 0 120 120" aria-label="Yesterday progress ring"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;circle class="ydayRingBg" cx="60" cy="60" r="52"&gt;&lt;/circle&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;circle class="ydayRingFg" id="yesterdayRingFg" cx="60" cy="60" r="52"&gt;&lt;/circle&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/svg&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ydayCenter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="statBig" id="yesterdayBig"&gt;00:00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="statMeta centerMeta" id="yesterdayMeta"&gt;Target: — • —%&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Today (ring) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="statCard centerCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="statHead"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="statLabel"&gt;Today&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pillSmall" id="todayDatePill"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="todayRingWrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;svg class="todayRing" viewBox="0 0 120 120" aria-label="Today progress ring"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;circle class="todayRingBg" cx="60" cy="60" r="52"&gt;&lt;/circle&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;circle class="todayRingFg" id="todayRingFg" cx="60" cy="60" r="52"&gt;&lt;/circle&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="todayCenter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="statBig" id="todayBig"&gt;00:00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="mutedSmall" id="todayPct"&gt;—%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="statMeta centerMeta" id="todayMeta"&gt;Target: —&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Streak --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="statCard centerCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="statHead"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="statLabel"&gt;Streak&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pillSmall"&gt;Days&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="streakBig centerBig" id="streakBig"&gt;0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="note"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Alarm plays at session start, Study ↔ Break transitions, and on completion.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Browsers may block audio until you click Start/Resume.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- TARGET + MASTERS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="view hidden" id="targetView"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rowBetween"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Set Target and Topics&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="ghost" id="backToHomeFromTarget"&gt;Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tabs" style="margin-top:12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab active" data-tab="targetTab"&gt;Set target&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" data-tab="masterTab"&gt;Set topic and mode&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Target tab --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tabPanel" id="targetTab"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="sub" style="margin-top:10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Target is stored as a &lt;b&gt;history by date&lt;/b&gt;. If you change target today, it applies from today onward only.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid2" style="margin-top:12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Hours (0–24)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="targetHours" type="number" min="0" max="24" step="1" value="1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Minutes (0–59)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="targetMinutes" type="number" min="0" max="59" step="1" value="0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="row" style="margin-top:14px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="primary" id="saveTargetBtn"&gt;Save Target (effective today)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="secondary" id="viewTargetHistoryBtn"&gt;View history&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="danger" id="clearTargetHistoryBtn"&gt;Clear history&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mutedSmall" id="targetSavedHint" style="margin-top:10px;"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tableWrap" style="margin-top:12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;table class="table"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Effective date&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Target&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tbody id="targetHistoryTbody"&gt;&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Masters tab --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tabPanel hidden" id="masterTab"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="sub" style="margin-top:10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Manage your &lt;b&gt;Topics&lt;/b&gt; and &lt;b&gt;Study Modes&lt;/b&gt;. You can &lt;b&gt;deactivate&lt;/b&gt; items (hide from future dropdowns).</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Items can’t be deleted if already used.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid2" style="margin-top:14px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Topics --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="masterCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="rowBetween"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3&gt;Topics&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="mutedSmall"&gt;Used items can’t be deleted&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row" style="margin-top:10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input id="newTopicInput" type="text" placeholder="Add new topic (e.g., Algebra)" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="secondary" id="addTopicBtn"&gt;Add&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="masterList" id="topicMasterList"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mutedSmall" id="topicMasterHint" style="margin-top:8px;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Modes --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="masterCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="rowBetween"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3&gt;Study modes&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="mutedSmall"&gt;Used items can’t be deleted&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row" style="margin-top:10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input id="newModeInput" type="text" placeholder="Add new mode (e.g., Flashcards)" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="secondary" id="addModeBtn"&gt;Add&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="masterList" id="modeMasterList"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mutedSmall" id="modeMasterHint" style="margin-top:8px;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- SETUP --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="view hidden" id="setupView"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rowBetween"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Set up your session&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="ghost" id="backToHomeFromSetup"&gt;Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="sub"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Configure total time, study + break cycles, topic and study mode. Clicking &lt;b&gt;Start&lt;/b&gt; begins the session.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Total time (minutes)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input id="totalMin" type="number" min="1" step="1" value="120" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Study session (minutes)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input id="studyMin" type="number" min="1" step="1" value="25" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Break time (minutes)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input id="breakMin" type="number" min="0" step="1" value="5" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid2" style="margin-top:12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Study mode &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;select id="method"&gt;&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Topic &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;select id="topic"&gt;&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1">&lt;div class="mutedSmall" id="masterSetupHint" style="margin-top:8px;"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="previewBox" style="margin-top:14px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="previewRow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="badge"&gt;Preview&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="muted"&gt;Start opens the run screen with circular phase progress.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="previewGrid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="previewStat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mutedSmall"&gt;Total&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bigNum" id="previewTotal"&gt;00:00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="previewStat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mutedSmall"&gt;Cycle&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bigNum" id="previewCycle"&gt;00:00 / 00:00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="previewStat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mutedSmall"&gt;Topic&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bigNum" id="previewTopic"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="previewStat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mutedSmall"&gt;Mode&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bigNum" id="previewMode"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="row" style="margin-top:12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="startSessionBtn" class="primary"&gt;Start&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mutedSmall" id="setupError" style="margin-top:10px;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- RUN --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="view hidden" id="runView"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rowBetween"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Session in progress&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="pill" id="runPhasePill"&gt;Study&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="runTimerBox"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="ringWrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;svg class="ring" viewBox="0 0 120 120" aria-label="Phase progress ring"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;circle class="ringBg" cx="60" cy="60" r="52"&gt;&lt;/circle&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;circle class="ringFg" id="phaseRing" cx="60" cy="60" r="52"&gt;&lt;/circle&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/svg&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="ringCenter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="ringLabel" id="ringLabel"&gt;Study&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="ringTime" id="ringTime"&gt;00:00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="ringSub"&gt;Phase remaining&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="runSub"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;span class="muted"&gt;Total elapsed:&lt;/span&gt; &lt;b id="runElapsed"&gt;00:00&lt;/b&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;span class="muted"&gt;Total remaining:&lt;/span&gt; &lt;b id="runRemaining"&gt;00:00&lt;/b&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;span class="muted"&gt;Active study:&lt;/span&gt; &lt;b id="runActiveStudy"&gt;00:00&lt;/b&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;span class="muted"&gt;Active break:&lt;/span&gt; &lt;b id="runActiveBreak"&gt;00:00&lt;/b&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="runMeta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;span class="muted"&gt;Topic:&lt;/span&gt; &lt;b id="runTopic"&gt;—&lt;/b&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;span class="muted"&gt;Mode:&lt;/span&gt; &lt;b id="runMode"&gt;—&lt;/b&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="runButtons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="pauseBtn" class="secondary"&gt;Pause&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="resumeBtn" class="secondary" disabled&gt;Resume&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button id="stopBtn" class="danger"&gt;Stop&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="note" id="audioHint"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- ANALYTICS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="view hidden" id="analyticsView"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rowBetween"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Analysis&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="ghost" id="backToHomeFromAnalytics"&gt;Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab active" data-tab="logTab"&gt;Study Log&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" data-tab="trendTab"&gt;Trend Analysis&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tabPanel" id="logTab"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="rowBetween" style="margin-top:10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="mutedSmall"&gt;Sessions saved in this browser (localStorage)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="secondary" id="exportBtn"&gt;Export JSON&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="danger" id="clearLogsBtn"&gt;Clear&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tableWrap" style="margin-top:12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;table class="table"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Date&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Topic&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Mode&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Planned&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Active Study&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Active Break&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Total Active&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Status&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tbody id="logTbody"&gt;&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mutedSmall" id="logCount" style="margin-top:10px;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tabPanel hidden" id="trendTab"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="filterRow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Date range (max 31 days)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="dateRange"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="date" id="rangeStart" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="mutedSmall"&gt;to&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="date" id="rangeEnd" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="secondary" id="applyRangeBtn"&gt;Apply&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mutedSmall" id="rangeHint"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Topic filter (applies to all charts)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="topicFilter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="__ALL__"&gt;All topics&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mutedSmall"&gt;Select a topic to filter daily + topic + mode charts.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="chartGrid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chartCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Daily active study time (Actual vs Target)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="canvasBox"&gt;&lt;canvas id="dailyBar"&gt;&lt;/canvas&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chartCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Topics by active study time&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="canvasBox"&gt;&lt;canvas id="topicPie"&gt;&lt;/canvas&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chartCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Study mode split&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="canvasBox"&gt;&lt;canvas id="modePie"&gt;&lt;/canvas&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="app.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
